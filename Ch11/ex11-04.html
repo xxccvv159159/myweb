@@ -7,15 +7,15 @@
 <script src="ch-SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
 <script src="ch-SpryAssets/SpryData.js" type="text/javascript"></script>
 <script src="ch-SpryAssets/SpryHTMLDataSet.js" type="text/javascript"></script>
-<script src="SpryAssets/SpryTooltip.js" type="text/javascript"></script>
+<script src="ch-SpryAssets/SpryTooltip.js" type="text/javascript"></script>
 <link href="ch-SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
-<link href="SpryAssets/SpryTooltip.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
 <!--
 var Taiwan = new Spry.Data.HTMLDataSet("tour.html", "tourTaiwan", {firstRowAsHeaders: false, useColumnsAsRows: true, columnNames: ['name', 'photo1', 'photo2', 'info', 'date', 'time', 'from', 'scene']});
 var Oversea = new Spry.Data.HTMLDataSet("tour.html", "tourOversea", {firstRowAsHeaders: false, useColumnsAsRows: true, columnNames: ['name', 'photo1', 'photo2', 'info', 'date', 'time', 'from', 'scene']});
 //-->
 </script>
+<link href="ch-SpryAssets/SpryTooltip.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="bgzone">
@@ -125,7 +125,7 @@ var Oversea = new Spry.Data.HTMLDataSet("tour.html", "tourOversea", {firstRowAsH
                       <td><div spry:detailregion="Oversea">{scene}</div></td>
                     </tr>
                   </table>
-                  <p><img src="images/icon2.gif" width="112" height="46" /></p></td>
+                  <p><img src="images/icon2.gif" width="112" height="46" id="sprytrigger1" /></p></td>
               </tr>
             </table>
           </div>
@@ -140,7 +140,7 @@ var Oversea = new Spry.Data.HTMLDataSet("tour.html", "tourOversea", {firstRowAsH
 <script type="text/javascript">
 <!--
 var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
-var sprytooltip1 = new Spry.Widget.Tooltip("sprytooltip1", "#sprytrigger1", {offsetY:-50});
+var sprytooltip1 = new Spry.Widget.Tooltip("sprytooltip1", "#sprytrigger1", {offsetY:"-50px", followMouse:true, closeOnTooltipLeave:true});
 //-->
 </script>
 </body>
